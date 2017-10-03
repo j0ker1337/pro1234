@@ -1,0 +1,10 @@
+
+<form>
+    <div class="form-group">
+        <label for="email">Email-Adresse</label>
+        <input  [(ngModel)]="search" name="search" (keydown)="onChange($event.target.value)"  (keyup)="onChange($event.target.value)" type="email" class="form-control" id="email" >
+    </div>
+</form>
+<nav *ngFor="let x of tasks">
+    <a routerLink="/task/{{x.id}}">{{x.name}}</a>
+</nav>
